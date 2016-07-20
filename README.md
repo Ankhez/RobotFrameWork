@@ -31,7 +31,7 @@ ${CASHDESK_BOX}						xpath=//div[@id="login_${TERMINAL_ID}"]
 ${REMOVE_TIME_CASHDESK}				xpath=//div[@id="current_details_data"]/table/tbody/tr[2]/td[2]/div[1]/span
 ${REMOVE_TIME_OK}					xpath=/html/body/div[4]/div[3]/div/button[1]/span
 ${INFO_BLOCK_IN_INFO_TERMINAL}  	xpath=//div[@id="edit-additional-info-block"]/form/label[${NUMBER}]/input
-${NUMBER}							1
+${NUMBER}							2
 	#label[i]={Enter user First and Last names,Enter email,Additional info,Memo field}
 
 
