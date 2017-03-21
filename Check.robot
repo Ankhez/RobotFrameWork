@@ -11,8 +11,8 @@ ${BUTTON_FOR_LOGIN}			    	submit
 ${ADMIN_HOST}					https://te2.paygpay.com
 ${ELEMENT_FOR_SEARCH_ID}			xpath=//table/tbody/tr[2]/td/div[2]/table[1]/tbody/tr/td/div/div[2]/form/a[1]
 ${SEARCHFORM_SEARCH_GO}				xpath=//table/tbody/tr[2]/td/div/table[2]/tbody/tr[3]/td[2]/table/tbody/tr[2]/td[4]/a
-${LOGIN}					balashov
-${LOGIN_PASS}					12345679
+${LOGIN}					hov
+${LOGIN_PASS}					11111111
 ${FIRST_ADD_IN_CASHDESK}			xpath=//div[@id='current_details_data']//span[.='Add']
 ${SECOND_ADD_IN_CASHDESK}			xpath=//div[@id='mini_card_add']//span[.='Add']
 ${TERMINAL_ID}					426799
