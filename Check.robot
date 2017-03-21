@@ -38,19 +38,18 @@ ${NUMBER}							2
 *** Keywords ***
 
 Search Club
-	[Arguments]				${Club}
-    Input Text 			 	${SEARCHFORM_SEARCH}  ${Club}
+	[Arguments]			${Club}
+    	Input Text 			${SEARCHFORM_SEARCH}  ${Club}
 	Click Element			${SEARCH_PARAMETERS_ELEMENT}
-    Click Element   	 	${ELEMENT_FOR_SEARCH_ID}
-	Sleep 	2s
+	Click Element   	 	${ELEMENT_FOR_SEARCH_ID}
 	Click Element 			${SEARCHFORM_SEARCH_GO}
 	Location Should Be 		${ADMIN_HOST}/admin/?gh_id=${ClubID}
 	
 Login in admin
 	Open Browser  ${Main}  firefox
-    Maximize Browser Window
-    Input Text 	 			login_name  	${LOGIN}
-    Input Text 	 			login_pass  	${LOGIN_PASS}
+    	Maximize Browser Window
+    	Input Text 	 		login_name  	${LOGIN}
+    	Input Text 	 		login_pass  	${LOGIN_PASS}
 	Click Button   		 	${BUTTON_FOR_LOGIN}
 
 Choose the CashDesk
@@ -58,39 +57,33 @@ Choose the CashDesk
 	Click Element			xpath=//ul[@id='parent_level']/li[2]/ul/li[5]/a/span 
 
 Add in CashDesk
-	[Arguments]				${ADD_CASH_IN_TERMINAL}
+	[Arguments]			${ADD_CASH_IN_TERMINAL}
 	Click Element			${CASHDESK_BOX}	
-    Click Element			${FIRST_ADD_IN_CASHDESK}
-	Input Text				detail_add	${ADD_CASH_IN_TERMINAL}
+    	Click Element			${FIRST_ADD_IN_CASHDESK}
+	Input Text			detail_add	${ADD_CASH_IN_TERMINAL}
 	Click Element 			${SECOND_ADD_IN_CASHDESK}
 	Click Element			${CLOSE_CASHDESK_BOX}
 	
-Z
-	[Arguments]				${SLEEP}
-	Sleep					${SLEEP}
-	
 Denomination	
-	[Arguments]				${DENOMINATION}
+	[Arguments]			${DENOMINATION}
 	Click Element			${DENOMINATION}
 	
 Add time in CashDesk
-	[Arguments]				${TIME_ADD}
+	[Arguments]			${TIME_ADD}
 	Click Element			${CASHDESK_BOX}	
-    Click Element			${FIRTS_ADD_TIME_IN_TERMINAL}	
-	Input Text				internet_time_input	${TIME_ADD}
+    	Click Element			${FIRTS_ADD_TIME_IN_TERMINAL}	
+	Input Text			internet_time_input	${TIME_ADD}
 	Click Element			${SECOND_ADD_TIME_IN_TERMINAL}
-	Z						3
 	Click Element			${CLOSE_CASHDESK_BOX}
 	
 Remove time from CashDesk
 	Click Element			${CASHDESK_BOX}	
 	Click Element			${REMOVE_TIME_CASHDESK}
 	Click Element			${REMOVE_TIME_OK}
-	Z						3
 	Click Element			${CLOSE_CASHDESK_BOX}
 	
 Check Time in Cashdesk
-	[Arguments]				${EQUALS}	
+	[Arguments]			${EQUALS}	
 	Click Element			${CASHDESK_BOX}
 	${time_result}=  		Get Text  	    ${INNER_TIME}
 	Should Be True			${time_result} == ${EQUALS}
@@ -98,8 +91,8 @@ Check Time in Cashdesk
 	Location Should Be		${ADMIN_HOST}/admin/cashdesk.php?gh_id=${ClubID}
 	
 InfoBlock in terminal	
-	[Arguments]				${NUMBER},${INFO}
+	[Arguments]			${NUMBER},${INFO}
 	${INFO_BLOCK}  			${INFO_BLOCK_IN_INFO_TERMINAL}
-	Input Text				${INFO_BLOCK}		${INFO}
+	Input Text			${INFO_BLOCK}		${INFO}
 	
 	
